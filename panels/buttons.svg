@@ -1,7 +1,7 @@
 <svg width="897" height="298" viewBox="0 0 897 298" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="buttonsunselected">
+<g id="buttons">
 <rect id="means" x="687.64" y="1.83948" width="209.36" height="296.16" fill="url(#pattern0)"/>
-<rect id="agriculture" x="342.918" y="1.83948" width="209.36" height="294.321" fill="url(#pattern1)"/>
+<rect id="agriculture" x="342.917" y="1.83948" width="209.36" height="294.321" fill="url(#pattern1)"/>
 <rect id="forest" width="207.555" height="296.16" fill="url(#pattern2)"/>
 </g>
 <defs>

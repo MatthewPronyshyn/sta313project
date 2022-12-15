@@ -1,6 +1,6 @@
 <svg width="870" height="144" viewBox="0 0 870 144" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="treesandco2">
-<path id="slider_trees" d="M369 62H0V83H369V62Z" fill="white"/>
+<path id="slider_trees" d="M369 62H0V92H369V62Z" fill="white"/>
 <text id="This is equivalent to the amount of CO2 in 12-pack cases of soda." fill="black" xml:space="preserve" style="white-space: pre" font-family="Comic Sans MS" font-size="16" letter-spacing="0em"><tspan x="6" y="112.484">This is equivalent to the amount of CO2 in </tspan><tspan x="6" y="134.484">12-pack cases of soda.                </tspan></text>
 <rect id="cases" x="325" y="95" width="53" height="17" fill="white"/>
 <rect id="pounds" x="326" y="2" width="52" height="17" fill="white"/>

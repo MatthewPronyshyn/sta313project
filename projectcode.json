@@ -1,0 +1,274 @@
+{
+ "gutter": 20,
+ "currentLayout": "init",
+ "layouts": [
+  {
+   "name": "init",
+   "panels": [
+    [
+     "introduction"
+    ],
+    [
+     "buttonstree"
+    ],
+    [
+     "forestwriteup"
+    ]
+   ]
+  }
+ ],
+ "classes": [
+     {
+   "class": "Graph1",
+   "elements": [
+    "button020",
+    "0-20"
+   ]
+  },
+  {
+   "class": "Graph2",
+   "elements": [
+    "button2040",
+    "20-40"
+   ]
+  },
+  {
+   "class": "Graph3",
+   "elements": [
+    "button4060",
+    "40-60"
+   ]
+  },
+  {
+   "class": "Graph4",
+   "elements": [
+    "button6080",
+    "60-80"
+   ]
+  },
+  {
+   "class": "Graph5",
+   "elements": [
+    "button80100",
+    "80-100"
+   ]
+  }
+  ],
+"variables": [
+  {
+   "name": "days",
+   "value": 0
+  },
+  {
+   "name": "carpounds",
+   "value": 0,
+   "what": ["days", "*1204"]
+  },
+  {
+   "name": "treenum",
+   "value": 0,
+   "what": ["days", "*25"]
+  },
+  {
+   "name": "trees",
+   "value": 0
+  },
+  {
+   "name": "pounds",
+   "value": 0,
+   "what": ["trees", "*0.13"]
+  },
+  {
+   "name": "cases",
+   "value": 0,
+   "what": ["trees", "*1.66"]
+  }
+ ], 
+ "panels": [
+    {
+   "id": "forestwriteup",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/forestwriteup.svg"
+  },
+  {
+   "id": "buttonsunselected",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/buttonsunclicked.svg"
+  },
+  {
+   "id": "buttonstree",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/buttonstree.svg"
+  },
+  {
+   "id": "buttonsagriculture",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/buttonsagriculture.svg"
+  },
+  {
+   "id": "buttonsmeans",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/buttonsmeans.svg"
+  },
+  {
+   "id": "buttonsinagriculture",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/buttonsinagriculture.svg"
+  },
+  {
+   "id": "agriculturesolution",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/agriculturesolution.svg"
+  },
+  {
+   "id": "problemwriteup",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/problemwriteup.svg"
+  },
+  {
+   "id": "meanswriteup",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/meanswriteup.svg"
+  },
+  {
+   "id": "introduction",
+   "url": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/introduction_new.svg",
+   "sliders": [
+    {
+     "id": "slider_trees",
+     "variable": "trees",
+     "min": 0,
+     "max": 67
+    }
+   ],
+    "input": [
+      {
+         "id": "input",
+         "variable": "days"
+      }
+      ]
+  }
+ ],
+ "operations": [
+      {
+   "trigger": "mouseover",
+   "element": [
+    "button020",
+    "button2040",
+    "button4060",
+    "button6080",
+    "button80100"
+   ],
+   "operation": "loadLayers",
+   "layer": [
+    "Graph1",
+    "Graph2",
+    "Graph3",
+    "Graph4",
+    "Graph5"
+   ]
+  },
+     {
+   "operation": "isotype",
+   "variable": "treenum",
+   "to": "treeplaceholder",
+   "attr": {
+    "widthIcon": 13
+   },
+   "icon": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/treepic.svg"
+  },
+  {
+   "operation": "isotype",
+   "variable": "cases",
+   "to": "caseplaceholder",
+   "attr": {
+    "widthIcon": 29
+   },
+   "icon": "https://raw.githubusercontent.com/MatthewPronyshyn/sta313project/main/panels/coke.svg"
+  },
+  {
+   "trigger": "mouseover",
+   "element": "start",
+   "operation": "highlight",
+   "after": {
+    "style": {
+     "stroke": "red"
+    }
+   }
+  },
+  {
+   "trigger": "click",
+   "element": "start",
+   "operation": "loadLayout",
+   "after": "introduction",
+   "group": "group1",
+   "layout": [
+    [
+     "buttonsunselected"
+    ]
+   ]
+  },
+  {
+   "trigger": "click",
+   "element": "forest",
+   "operation": "loadLayout",
+   "after": "introduction",
+   "group": "group1",
+   "layout": [
+    [
+     "buttonstree"
+    ],
+    [
+     "forestwriteup"
+    ]
+   ]
+  },
+  {
+   "trigger": "click",
+   "element": "agriculture",
+   "operation": "loadLayout",
+   "after": "introduction",
+   "group": "group1",
+   "layout": [
+    [
+     "buttonsagriculture"
+    ],
+    [
+     "buttonsinagriculture"
+    ]
+   ]
+  },
+  {
+   "trigger": "click",
+   "element": "means",
+   "operation": "loadLayout",
+   "after": "introduction",
+   "group": "group1",
+   "layout": [
+    [
+     "buttonsmeans"
+    ],
+    ["meanswriteup"]
+   ]
+  },
+  {
+   "trigger": "click",
+   "element": "problem",
+   "operation": "loadLayout",
+   "after": "introduction",
+   "group": "group1",
+   "layout": [
+    [
+     "buttonsagriculture"
+    ]
+    ,["buttonsinagriculture"]
+    ,["problemwriteup"]
+   ]
+  },
+  {
+   "trigger": "click",
+   "element": "solution",
+   "operation": "loadLayout",
+   "after": "buttonsinagriculture",
+   "group": "group1",
+   "layout": [
+    [
+     "buttonsagriculture"
+    ]
+    ,["buttonsinagriculture"]
+    ,["agriculturesolution"]
+   ]
+  }
+ ]
+}
